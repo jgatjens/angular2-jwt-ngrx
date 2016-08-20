@@ -11,20 +11,21 @@ import { FORM_DIRECTIVES } from '@angular/forms';
 	`],
 	directives: [...FORM_DIRECTIVES]
 })
-export class Login {
+export class Register {
 
 	user = {
-    username: 'jgatjens',
-    password: 'password1'
+    email: '',
+    username: '',
+    password: ''
   };
 
   constructor(private auth: AuthService, private router: Router) {
-  	console.log('Login controller');
+  	console.log('register');
   }
 
   authenticate() {
-  	console.log(this.user);
-    this.auth.authenticate('users/login', this.user)
+
+    this.auth.authenticate('users', this.user)
     .subscribe(() => this.router.navigate(['']))
   }
 }

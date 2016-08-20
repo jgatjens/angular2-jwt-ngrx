@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 // import { StoreHelper } from './store-helper';
-// import { Store} from '../store';
-import { ApiService } from './api.service';
-import { Observable } from 'rxjs/Observable';
+import { Store } from '@ngrx/store';
 import { CanActivate, Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
+
+import { ApiService } from './api.service';
+import { USER_LOGIN, USER_LOGOUT } from '../reducers/users.reducer';
 
 @Injectable()
 export class AuthService implements CanActivate {
@@ -13,7 +15,8 @@ export class AuthService implements CanActivate {
 	constructor(
 		 // private storeHelper: StoreHelper,
 		 private api: ApiService,
-		 private router: Router
+		 private router: Router,
+		 private _store: Store <any>
 		 // private store: Store
 	 ) {
 		const token = window.localStorage.getItem(this.JWT_KEY);
@@ -42,13 +45,13 @@ export class AuthService implements CanActivate {
 	authenticate(path, creds): Observable<any> {
 		return this.api.post(`/${path}`, creds)
 			.do(res => this.setJwt(res.token))
-			// .do(res => this.storeHelper.update('user', res.data))
+			.do(res => this._store.dispatch({ type: USER_LOGIN, payload: res }))
 			.map(res => res.data);
 	}
 
 	signout() {
 		window.localStorage.removeItem(this.JWT_KEY);
-		// this.store.purge();
+		this._store.dispatch({ type: USER_LOGOUT });
 		this.router.navigate(['', 'login']);
 	}
 }

@@ -1,6 +1,20 @@
 <div class="container">
 	<form #authForm="ngForm" (ngSubmit)="authenticate(form)">
 		<div class="form-group row">
+			<label for="inputEmail" class="col-sm-3 col-form-label">Email</label>
+			<div class="col-sm-9">
+				<input
+					type="email"
+					class="form-control"
+					id="inputEmail"
+					name="email"
+					placeholder="Email"
+					required
+          [(ngModel)]="user.email"
+				>
+			</div>
+		</div>
+		<div class="form-group row">
 			<label for="inputUsername" class="col-sm-3 col-form-label">Username</label>
 			<div class="col-sm-9">
 				<input
@@ -31,7 +45,7 @@
 
 		<div class="form-group row">
 			<div class="offset-sm-3 col-sm-5">
-				<button type="submit" class="btn btn-primary btn-block">Login</button>
+				<button type="submit" class="btn btn-primary btn-block">Sign In</button>
 			</div>
 		</div>
 	</form>

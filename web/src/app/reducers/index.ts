@@ -1,2 +1,2 @@
 export { counterReducer } from './counter';
-// export { usersReducer } from './users';
+export { usersReducer } from './users.reducer';

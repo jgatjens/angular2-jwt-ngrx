@@ -2,5 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({})
 export class Applicant {
-	constructor() {}
+	constructor() {
+		console.log('Applicants');
+	}
 }
