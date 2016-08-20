@@ -120,8 +120,14 @@ module.exports = {
 				if (!isMatch) {
 					return res.status(401).json('invalid username or password');
 				} else {
-					var token = jwt.sign({ username: req.body.username }, process.env.SECRET)
-					return res.status(200).json({ message: 'login succefully', username: user.username, token: token });
+					var token = jwt.sign({ username: req.body.username }, process.env.SECRET);
+					
+					delete user._doc.password;
+
+					return res.status(200).json({ 
+						message: 'login succefully', 
+						...user._doc 
+					});
 				}
 			})
 		})
