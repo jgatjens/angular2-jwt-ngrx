@@ -8,9 +8,11 @@ import 'rxjs/Rx';
 import { ApiService } from './api.service';
 import { USER_LOGIN, USER_LOGOUT } from '../reducers/users.reducer';
 
+export const USER_KEY: string = 'luca_gatjens_17';
+
+
 @Injectable()
 export class AuthService implements CanActivate {
-	JWT_KEY: string = 'luca_gatjens_17';
 
 	constructor(
 		 // private storeHelper: StoreHelper,
@@ -19,19 +21,19 @@ export class AuthService implements CanActivate {
 		 private _store: Store <any>
 		 // private store: Store
 	 ) {
-		const token = window.localStorage.getItem(this.JWT_KEY);
-		if (token) {
-			this.setJwt(token);
+		const user: any = JSON.parse(window.localStorage.getItem(USER_KEY));
+		if (user) {
+			this.setUser(user);
 		}
 	}
 
-	setJwt(jwt: string) {
-		window.localStorage.setItem(this.JWT_KEY, jwt);
-		this.api.setHeaders({Authorization: `Bearer ${jwt}`});
+	setUser(user: any) {
+		window.localStorage.setItem(USER_KEY, JSON.stringify(user));
+		this.api.setHeaders({Authorization: `Bearer ${user.token}`});
 	}
 
 	isAuthorized(): boolean {
-		return Boolean(window.localStorage.getItem(this.JWT_KEY));
+		return Boolean(window.localStorage.getItem(USER_KEY));
 	}
 
 	canActivate(): boolean {
@@ -39,18 +41,19 @@ export class AuthService implements CanActivate {
 		if (!isAuth) {
 			this.router.navigate(['', 'login']);
 		}
+
 		return isAuth;
 	}
 
 	authenticate(path, creds): Observable<any> {
 		return this.api.post(`/${path}`, creds)
-			.do(res => this.setJwt(res.token))
+			.do(res => this.setUser(res))
 			.do(res => this._store.dispatch({ type: USER_LOGIN, payload: res }))
 			.map(res => res.data);
 	}
 
 	signout() {
-		window.localStorage.removeItem(this.JWT_KEY);
+		window.localStorage.removeItem(USER_KEY);
 		this._store.dispatch({ type: USER_LOGOUT });
 		this.router.navigate(['', 'login']);
 	}

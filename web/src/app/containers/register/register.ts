@@ -6,7 +6,7 @@ import { FORM_DIRECTIVES } from '@angular/forms';
 @Component({
 	styles: [`
 		form {
-			padding: 50px 10%;
+			padding: 50px 0;
 		}
 	`],
 	directives: [...FORM_DIRECTIVES]
