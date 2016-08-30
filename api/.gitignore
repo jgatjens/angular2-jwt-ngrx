@@ -2,6 +2,9 @@
 logs
 *.log
 npm-debug.log*
+db/prod
+db/dev
+db/bucket_rename.js
 
 # Runtime data
 pids

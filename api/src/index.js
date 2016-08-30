@@ -4,6 +4,7 @@ import express from 'express';
 
 import db from './services/db'
 import routeUsers  from './routes/users';
+import routeJobs  from './routes/jobs';
 import bodyParser from 'body-parser';
 import expressJWT from 'express-jwt';
 import cors from 'cors';
@@ -20,11 +21,13 @@ app.use(express.static("../../src/index.html"));
 app.use(expressJWT({ secret: process.env.SECRET }).unless(function(req) {
 	return (
     req.originalUrl === '/users/login' && req.method === 'POST' ||
+    req.originalUrl === '/jobs' && req.method === 'GET' ||
     req.originalUrl === '/users' && req.method === 'POST'
    )
 }));
 
 app.use('/users', routeUsers);
+app.use('/jobs', routeJobs);
 
 // send json responde for unauthorized request
 app.use(function (err, req, res, next) {

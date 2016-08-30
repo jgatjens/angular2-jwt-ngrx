@@ -1,9 +1,10 @@
 import { Store, StoreModule } from '@ngrx/store';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
 
-import { counterReducer, usersReducer } from './reducers';
-import { Job, JobModule } from './containers';
+import { usersReducer, jobsReducer } from './reducers';
+import { Job } from './containers';
 
 import { AuthService, ApiService } from './services';
 
@@ -34,8 +35,8 @@ const ROUTER_CONFIG = [
 	],
 	imports: [
 		RouterModule.forChild(ROUTER_CONFIG),
-		StoreModule.provideStore({ users: usersReducer }),
-		JobModule,
+		StoreModule.provideStore({ users: usersReducer, jobs: jobsReducer }),
+		BrowserModule
 	],
 })
 export default class AppModule {

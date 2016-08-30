@@ -21,12 +21,9 @@ export class Login {
 	constructor(
 		private auth: AuthService,
 		private router: Router
-	){
-		console.log('Login controller');
-	}
+	){}
 
 	authenticate() {
-		console.log(this.user);
 		this.auth.authenticate('users/login', this.user)
 		.subscribe(() => {
 			this.router.navigate(['']);

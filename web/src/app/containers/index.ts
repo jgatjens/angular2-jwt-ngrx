@@ -1,2 +1,2 @@
-export { JobModule, Job } from './job';
+export { Job } from './job/job';
 

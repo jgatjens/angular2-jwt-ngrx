@@ -30,6 +30,7 @@ export class AuthService implements CanActivate {
 	setUser(user: any) {
 		window.localStorage.setItem(USER_KEY, JSON.stringify(user));
 		this.api.setHeaders({Authorization: `Bearer ${user.token}`});
+		this._store.dispatch({ type: USER_LOGIN, payload: user });
 	}
 
 	isAuthorized(): boolean {
@@ -48,7 +49,6 @@ export class AuthService implements CanActivate {
 	authenticate(path, creds): Observable<any> {
 		return this.api.post(`/${path}`, creds)
 			.do(res => this.setUser(res))
-			.do(res => this._store.dispatch({ type: USER_LOGIN, payload: res }))
 			.map(res => res.data);
 	}
 

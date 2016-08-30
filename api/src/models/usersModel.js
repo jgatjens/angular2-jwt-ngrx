@@ -4,24 +4,24 @@ import bcrypt from 'bcrypt';
 const SALT_WORK_FACTOR = 10;
 
 let userSchema = new mongoose.Schema({
-		"gender": String,
-		"name": String,
-		"email": { type: String, required: true },
-		"username": { type: String, required: true, index: { unique: true } },
-		"password": { type: String, required: true },
-		"phone": String,
-		"cell": String,
-		"location": {
-			"street": String,
-			"city": String,
-			"state": String,
-			"zip": Number
-		},
-		"picture": {
-			"large": String,
-			"medium": String,
-			"thumbnail": String
-		}
+	"gender": String,
+	"name": String,
+	"email": { type: String, required: true },
+	"username": { type: String, required: true, index: { unique: true } },
+	"password": { type: String, required: true },
+	"phone": String,
+	"cell": String,
+	"location": {
+		"street": String,
+		"city": String,
+		"state": String,
+		"zip": Number
+	},
+	"picture": {
+		"large": String,
+		"medium": String,
+		"thumbnail": String
+	}
 });
 
 
@@ -48,10 +48,10 @@ userSchema.pre('save', function(next) {
 });
 
 userSchema.methods.comparePassword = function(candidatePassword, cb) {
-    bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-        if (err) return cb(err);
-        cb(null, isMatch);
-    });
+  bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+      if (err) return cb(err);
+      cb(null, isMatch);
+  });
 };
 
 // Include text index so then we can make searchs
