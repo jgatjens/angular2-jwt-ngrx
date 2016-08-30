@@ -1,7 +1,10 @@
-import { Store, StoreModule } from '@ngrx/store';
+import { BrowserModule } from '@angular/platform-browser'
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser'
+
+// vendors
+import { Store, StoreModule } from '@ngrx/store';
+import { MomentModule } from 'angular2-moment/module';
 
 import { usersReducer, jobsReducer } from './reducers';
 import { Job } from './containers';
@@ -36,7 +39,8 @@ const ROUTER_CONFIG = [
 	imports: [
 		RouterModule.forChild(ROUTER_CONFIG),
 		StoreModule.provideStore({ users: usersReducer, jobs: jobsReducer }),
-		BrowserModule
+		BrowserModule,
+		MomentModule
 	],
 })
 export default class AppModule {

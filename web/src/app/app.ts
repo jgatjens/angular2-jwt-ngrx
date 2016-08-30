@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-// import { Store } from '@ngrx/store';
 // ui componentes
 import { AppFooter, AppNavbar } from './ui';
-// import { USER_LOGIN, USER_LOGOUT } from './reducers/users.reducer';
-// import { USER_KEY } from './services/auth.service'
 
 @Component({
 	directives: [

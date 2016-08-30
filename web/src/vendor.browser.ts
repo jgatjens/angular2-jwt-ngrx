@@ -20,6 +20,10 @@ import 'rxjs/add/operator/mergeMap';
 import '@ngrx/core';
 import '@ngrx/store';
 
+// Date
+import 'moment';
+import 'angular2-moment';
+
 if ('production' === ENV) {
   // Production
 
