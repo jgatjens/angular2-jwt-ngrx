@@ -1,0 +1,94 @@
+:host {
+	max-width: 1024px;
+	margin: 0 auto;
+	display: block;
+
+    .login-module {
+        display: flex;
+  
+        .login-img {
+            background-image: url(/assets/login.jpg);
+            background-size: cover;
+            position: relative;
+            height: 100vh;
+            background-position-x: 50%;
+        }
+    }
+
+    .panel-left, .panel-right {
+        width: 50%;
+    }
+
+    .panel-right {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+.login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    a {
+        color: #D32F2F;
+        text-decoration: none;
+        padding-right: 10px;
+    }
+}
+
+
+.login-form {
+    max-width: 370px;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+
+    button.md-primary {
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    md-input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form-submit {
+        padding-top: 20px;
+        text-align: right;
+        width: 100%;
+        display: flex;
+            align-items: center;
+        justify-content: flex-end;
+    }
+
+    .form-status {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        display: inline-block;
+    }
+
+    .error-text {
+        font-size: 13px;
+        color: #D32F2F;
+        min-height: 17px;
+        display: block;
+        position: relative;
+        
+        .material-icons {
+            position: absolute;
+            right: 0;
+            top: -1px;
+            font-size: 17px;
+        }
+    }
+}
+
+

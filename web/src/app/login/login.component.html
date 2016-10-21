@@ -29,11 +29,13 @@
         <md-input name="password" required placeholder="Password"></md-input>
 
         <div class="error-text">
-          <span *ngIf="error">Username or Password is incorrect.  <i class="material-icons app-input-icon"></i></span> 
+          <span *ngIf="error">Username or password is incorrect.</span>
+          <i *ngIf="error" class="material-icons">warning</i> 
         </div>
 
         <div class="form-submit">
-          <button md-raised-button color="primary">Login</button>
+          <md-spinner *ngIf="inProgress" color="accent" class="form-status"></md-spinner>
+          <button [disabled]="inProgress" md-raised-button color="primary">Login</button>
         </div>
       </div>
      </form>
