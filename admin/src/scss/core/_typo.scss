@@ -1,0 +1,6 @@
+// The warn palette is optional (defaults to red).
+$warn-color: mat-color(mat-palette($mat-red, 700));
+
+h2 {
+  color: $warn-color;
+}

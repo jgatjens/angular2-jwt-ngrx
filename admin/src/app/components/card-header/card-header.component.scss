@@ -1,0 +1,43 @@
+$padding: 10px;
+
+:host {
+
+
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding;
+    color: white;
+  }
+
+  .card-avatar {
+    display: flex;
+    align-items: center;
+  }
+
+  .card-avatar-bg {
+    background-color: rgba(#000000, .26);
+    color: white;
+    padding: 6px;
+    border-radius: 50%;
+
+    .mat-icon {
+      float: left;
+    }
+  }
+
+  .card-title {
+    padding-left: 20px;
+    > span {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  // colors
+  .color-technology { background-color: #d94d4d; }
+  .color-creative { background-color: #4A90E2; }
+  .color-applicant { background-color: #9013FE; }
+}

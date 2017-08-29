@@ -1,0 +1,19 @@
+:host {
+  .header-profile {
+    display: flex;
+    margin-right: 20px;
+
+    span {
+      font-size: 14px;
+      position: relative;
+      padding-right: 10px;
+    }
+
+    .mat-icon {
+      font-size: 40px;
+      position: relative;
+      top: -3px;
+      opacity: 0.7;
+    }
+  }
+}

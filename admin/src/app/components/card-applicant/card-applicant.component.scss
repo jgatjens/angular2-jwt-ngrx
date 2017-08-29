@@ -1,0 +1,37 @@
+$padding: 10px;
+
+:host {
+  .card-content {
+    padding: 0 $padding;
+
+    h3, p {
+      text-align: left;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .card-info {
+    display: flex;
+    color: #666;
+    .mat-icon {
+      margin-right: 10px;
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $padding;
+    border-top: 1px solid #d8d8d8;
+    position: relative;
+
+    .mat-button {
+      text-transform: uppercase;
+    }
+  }
+}

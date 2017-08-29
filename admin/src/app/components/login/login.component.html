@@ -1,0 +1,48 @@
+<div class="login-module">
+  <div class="panel-left">
+    <div class="login-img"></div>
+  </div>
+  <div class="panel-right">
+
+    <div class="login-header">
+      <a>Go back</a>
+
+      <svg width="61px" height="61px" viewBox="103 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="logo_black" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(104.709677, 1.552632)">
+              <g id="Layer_1">
+                  <rect id="Rectangle-path" stroke="#FFFFFF" fill="#000000" x="0" y="0" width="57.6738353" height="57.687614"></rect>
+                  <g id="Group" fill="#FFFFFF">
+                      <path d="M53.4623529,4.18651462 L53.4623529,53.5007602 L4.21114118,53.5007602 L4.21114118,4.18651462 L53.4623529,4.18651462 L53.4623529,4.18651462 Z M57.8461294,0 L0,0 L0,57.687614 L57.6738353,57.687614 L57.6738353,0 L57.8461294,0 L57.8461294,0 Z" id="Shape"></path>
+                      <polygon id="Shape" transform="translate(29.611282, 28.843807) rotate(270.000000) translate(-29.611282, -28.843807) " points="36.1447319 26.625731 31.1341568 26.625731 23.0741447 26.625731 23.0741447 20.6381637 19.2225647 20.6381637 19.2225647 37.0494503 23.0741447 37.0494503 23.0741447 29.8852632 36.1447319 29.8852632 36.1447319 37.0494503 40 37.0494503 40 20.6381637 36.1447319 20.6381637"></polygon>
+                  </g>
+              </g>
+          </g>
+      </svg>
+    </div>
+
+    <form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+      <div class="login-form">
+        <h2>Login</h2>
+        <p>Lorem polaroid bitters hangar pickled. <br> Vegan disrupt tousled.</p>
+
+        <md-input-container>
+          <input mdInput name="username" required placeholder="Username">
+        </md-input-container>
+        <md-input-container>
+          <input mdInput name="password" required placeholder="Password">
+        </md-input-container>
+
+        <div class="error-text">
+          <span *ngIf="error">Username or password is incorrect.</span>
+          <i *ngIf="error" class="material-icons">warning</i>
+        </div>
+
+        <div class="form-submit">
+          <md-spinner *ngIf="inProgress" color="accent" class="form-status"></md-spinner>
+          <button [disabled]="inProgress" md-raised-button color="primary">Login</button>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>

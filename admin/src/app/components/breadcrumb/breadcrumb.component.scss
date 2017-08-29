@@ -1,0 +1,16 @@
+:host {
+  text-align: left;
+
+  .breadcrumb {
+    padding: .75rem 1rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .mat-button {
+    min-width: 50px;
+    padding: 0 8px;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,49 @@
+:host {
+
+  max-width: 370px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+
+  button.md-primary {
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .mat-input-container {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .form-submit {
+    padding-top: 20px;
+    text-align: right;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .form-status {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  .error-text {
+    font-size: 13px;
+    color: #D32F2F;
+    min-height: 17px;
+    display: block;
+    position: relative;
+
+    .material-icons {
+        position: absolute;
+        right: 0;
+        top: -1px;
+        font-size: 17px;
+    }
+  }
+
+}

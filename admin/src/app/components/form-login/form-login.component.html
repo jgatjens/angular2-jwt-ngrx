@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit(loginForm)" #loginForm="ngForm">
+  <div class="login-form">
+    <h2>Login</h2>
+    <p>Lorem polaroid bitters hangar pickled. <br> Vegan disrupt tousled.</p>
+
+    <md-input-container>
+      <input mdInput name="username" required placeholder="Username">
+    </md-input-container>
+    <md-input-container>
+      <input mdInput name="password" required placeholder="Password">
+    </md-input-container>
+
+    <div class="error-text">
+      <span *ngIf="error">Username or password is incorrect.</span>
+      <md-icon *ngIf="error">warning</md-icon>
+    </div>
+
+    <div class="form-submit">
+      <md-spinner *ngIf="inProgress" color="accent" class="form-status"></md-spinner>
+      <button [disabled]="inProgress" md-raised-button color="warn">Login</button>
+    </div>
+  </div>
+</form>

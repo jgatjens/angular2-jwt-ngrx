@@ -1,0 +1,17 @@
+// @import 'settings';
+:host {
+  text-align: center;
+
+  .align-middle {
+    height: 100%;
+  }
+
+  h1 {
+    color: #00bcb4;
+    font-size: 110px;
+    line-height: 110px;
+    // font-family: $family-Thin;
+    margin-bottom: 50px;
+  }
+
+}

@@ -1,0 +1,30 @@
+:host {
+  .search-bar {
+    background-color: rgba(#fff, 0.15);
+    min-width: 200px;
+    margin: 0 10%;
+    text-align: left;
+  }
+
+  .mat-icon-button {
+    margin: 0 15px;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    color: white;
+
+    font-size: 19px;
+    margin-right: 20px;
+    height: 36px;
+    outline: none;
+    position: relative;
+    top: 3px;
+
+
+  }
+  input::placeholder {
+    color: white;
+  }
+}

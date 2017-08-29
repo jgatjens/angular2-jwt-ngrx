@@ -1,0 +1,36 @@
+<app-default-layout>
+  <div class="region-header"></div>
+  <div class="region-content">
+    <h1> Styleguide</h1>
+
+    <app-styleguide [header]="'Header Menu'">
+      <app-header></app-header>
+    </app-styleguide>
+
+    <app-styleguide [header]="'Job Card'">
+      <app-card [card]="card">
+        <app-card-jobs [content]="card"></app-card-jobs>
+      </app-card>
+    </app-styleguide>
+
+    <app-styleguide [header]="'Applicant Card'">
+      <app-card [card]="card2">
+        <app-card-applicant [content]="card2"></app-card-applicant>
+      </app-card>
+    </app-styleguide>
+
+    <app-styleguide [header]="'Login Form'">
+      <app-form-login></app-form-login>
+    </app-styleguide>
+
+    <app-styleguide [header]="'Company Logo'">
+      <app-logo [name]="'Company Name'"></app-logo>
+    </app-styleguide>
+
+    <app-styleguide [header]="'Breadcrum'">
+      <app-breadcrumb></app-breadcrumb>
+    </app-styleguide>
+
+  </div>
+  <div class="region-footer"></div>
+</app-default-layout>

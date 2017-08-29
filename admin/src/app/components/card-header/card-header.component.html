@@ -1,0 +1,29 @@
+<div (click)="toggle()" class="card-header color-{{cardHeader.category}}">
+  <div class="card-avatar">
+    <div class="card-avatar-bg">
+      <md-icon>{{cardHeader.icon}}</md-icon>
+    </div>
+
+    <div class="card-title">
+      <span>{{cardHeader.title}}</span>
+      <span><strong>{{cardHeader.subtitle}}</strong></span>
+    </div>
+  </div>
+
+  <div class="card-buttons">
+    <button md-icon-button [mdMenuTriggerFor]="menu">
+      <md-icon>more_vert</md-icon>
+    </button>
+    <md-menu #menu="mdMenu">
+      <button md-menu-item>
+        <span>Unpublish</span>
+      </button>
+      <button md-menu-item disabled>
+        <span>Edit</span>
+      </button>
+      <button md-menu-item>
+        <span>Delete</span>
+      </button>
+    </md-menu>
+  </div>
+</div>

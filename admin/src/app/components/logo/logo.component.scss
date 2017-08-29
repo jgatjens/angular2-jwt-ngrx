@@ -1,0 +1,14 @@
+:host {
+  .company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    a {
+      color: #D32F2F;
+      text-decoration: none;
+      padding-right: 10px;
+    }
+  }
+}

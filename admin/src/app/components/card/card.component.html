@@ -1,0 +1,12 @@
+<div class="custom-card">
+  <!-- header -->
+  <app-card-header
+    [cardHeader]="card.header"
+    (cardHeaderToggle)="cardHeaderToggle()">
+  </app-card-header>
+  <!-- end header -->
+  <div *ngIf="toggleAccordion" class="card-accordion">
+    <!-- content -->
+    <ng-content></ng-content>
+  </div>
+</div>
