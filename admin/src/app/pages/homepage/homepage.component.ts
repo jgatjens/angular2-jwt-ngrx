@@ -9,6 +9,13 @@ export class HomepagePageComponent {
 
   public card: any;
   public card2: any;
+  public formGeneral = {
+    header: {
+      category: 'jobs',
+      icon: 'fullscreen_exit',
+      title: 'General Information'
+    }
+  }
 
   constructor() {
     this.card = {

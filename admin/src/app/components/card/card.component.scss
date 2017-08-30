@@ -2,9 +2,14 @@
   display: inline-block;
 
   .app-card {
-    width: 360px;
+    min-width: 320px;
     box-shadow: 0 2px 2px rgba(10,16,20,.24), 0 0 2px rgba(10,16,20,.12);
     box-sizing: border-box;
     transition: box-shadow .5s;
   }
+
+  ::ng-deep .app-forms {
+    padding: 0 10px;
+  }
+
 }

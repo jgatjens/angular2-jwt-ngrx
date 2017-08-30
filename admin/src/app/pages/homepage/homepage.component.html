@@ -19,7 +19,13 @@
       </app-card>
     </app-styleguide>
 
-    <app-styleguide [header]="'Forms'" [inline]="true">
+    <app-styleguide [header]="'Form Job General Information'">
+      <app-card [card]="formGeneral">
+        <app-form-job-general></app-form-job-general>
+      </app-card>
+    </app-styleguide>
+
+    <app-styleguide [header]="'Profile Forms'" [inline]="true">
       <app-form-login></app-form-login>
       <app-form-profile></app-form-profile>
       <app-form-password></app-form-password>

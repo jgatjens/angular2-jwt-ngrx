@@ -1,0 +1,79 @@
+<form class="app-forms" (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+  <div class="grid grid--container">
+    <div class="row">
+      <div class="col col--sm">
+        <p class="form-required">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,<br> consectetur, adipisci velit... *</p>
+        <md-input-container>
+          <input mdInput name="title" required placeholder="Title">
+        </md-input-container>
+        <md-input-container>
+          <textarea mdInput required placeholder="Description"></textarea>
+          <md-hint align="start"><strong>If not social share information provided, this description will be use instead!</strong> </md-hint>
+        </md-input-container>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col--sm">
+        <md-input-container>
+          <input mdInput name="year_of_expierence" required placeholder="Years of experience">
+        </md-input-container>
+      </div>
+      <div class="col col--sm">
+        <md-form-field>
+          <input mdInput [mdDatepicker]="picker" placeholder="Publish date picker">
+          <md-datepicker-toggle mdSuffix [for]="picker"></md-datepicker-toggle>
+          <md-datepicker touchUi="true" #picker></md-datepicker>
+        </md-form-field>
+      </div>
+    </div>
+    <div class="row row--sm-bottom">
+      <div class="col col--sm">
+        <md-select placeholder="Category">
+          <md-option [value]="'Technology'">Technology</md-option>
+          <md-option [value]="'Creative'">Creative</md-option>
+          <md-option [value]="'Quality'">Quality</md-option>
+          <md-option [value]="'Operations'">Operations</md-option>
+          <md-option [value]="'HR'">HR</md-option>
+          <md-option [value]="'Marketing'">Marketing</md-option>
+        </md-select>
+      </div>
+      <div class="col col--sm text--sm-right">
+        <md-select placeholder="Duration">
+          <md-option [value]="'indefinite'">Technology</md-option>
+          <md-option [value]="'6m'">6 months</md-option>
+          <md-option [value]="'1y'">1 year</md-option>
+          <md-option [value]="'2y'">2 year</md-option>
+        </md-select>
+      </div>
+    </div>
+
+    <div class="row row--sm-bottom">
+      <div class="col col--sm">
+          <md-slide-toggle>Publish this Job</md-slide-toggle>
+      </div>
+    </div>
+    <!--
+    <div class="row row--sm-bottom">
+      <div class="col col--sm">
+        <label>Contract</label>
+      </div>
+      <div class="col col--sm text--sm-right">
+        <md-radio-group>
+          <md-radio-button value="1">Fulltime</md-radio-button>
+          <md-radio-button value="2">Freelance</md-radio-button>
+          <md-radio-button value="3">Not specified</md-radio-button>
+        </md-radio-group>
+      </div>
+    </div> -->
+  </div>
+
+  <div class="card-footer">
+      <div class="form-submit">
+        <md-spinner *ngIf="inProgress" color="accent" class="form-status"></md-spinner>
+        <button [disabled]="inProgress" md-raised-button color="warn">Save General Information</button>
+      </div>
+  </div>
+
+</form>
+

@@ -1,0 +1,21 @@
+:host {
+  .mat-slide-toggle {
+    margin-top: 15px;
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    position: relative;
+    margin-top: 20px;
+
+    .mat-button {
+      text-transform: uppercase;
+      color: #D0021B;
+      font-weight: bold;
+      font-size: 15px;
+    }
+  }
+}
