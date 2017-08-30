@@ -1,8 +1,9 @@
+@import '~sass-mq/mq';
+
 :host {
   .header-profile {
     display: flex;
-    margin-right: 20px;
-
+    align-items: center;
     span {
       font-size: 14px;
       position: relative;
@@ -11,9 +12,16 @@
 
     .mat-icon {
       font-size: 40px;
+      width: 40px;
+      height: 40px;
       position: relative;
-      top: -3px;
       opacity: 0.7;
+    }
+
+    @include mq($until: tablet) {
+      span {
+        display: none;
+      }
     }
   }
 }

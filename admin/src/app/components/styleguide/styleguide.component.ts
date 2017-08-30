@@ -7,5 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StyleguideComponent {
   @Input() header: string = 'this is header';
+  @Input() inline = false;
   constructor() { }
 }

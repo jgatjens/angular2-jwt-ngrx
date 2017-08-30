@@ -1,8 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~@angular/material/theming';
+@import './core/common.scss';
 @import './core/typo.scss';
 @import './core/icons.scss';
+@import './core/forms.scss';
+@import './core/styleguide.scss';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -32,3 +35,5 @@ body {
   margin: 0;
   background-color: rgba(#F5F5F5, 0.2);
 }
+
+

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-form-profile',
+  templateUrl: './form-profile.component.html',
+  styleUrls: ['./form-profile.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class FormProfileComponent implements OnInit {
   public error: boolean = false;
   public inProgress: boolean = false;
 

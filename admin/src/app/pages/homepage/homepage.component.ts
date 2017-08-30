@@ -31,7 +31,7 @@ export class HomepagePageComponent {
       },
       description: 'Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed do eiusmod tempor incididunt. Lorem ipsum dolor sit amet, consectetur adipisi cing elit, sed eiusmod tempor incidi...',
       email: 'marcoss@gmail.com',
-      phone: '8337-4462'
+      phone: '+506 8337-4462'
     }
   }
 

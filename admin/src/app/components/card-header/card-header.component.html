@@ -1,4 +1,4 @@
-<div (click)="toggle()" class="card-header color-{{cardHeader.category}}">
+<div  class="card-header color-{{cardHeader.category}}">
   <div class="card-avatar">
     <div class="card-avatar-bg">
       <md-icon>{{cardHeader.icon}}</md-icon>
@@ -11,9 +11,17 @@
   </div>
 
   <div class="card-buttons">
+    <button *ngIf="!toggleAccordion" md-icon-button (click)="toggle()">
+      <md-icon>keyboard_arrow_down</md-icon>
+    </button>
+    <button *ngIf="toggleAccordion" md-icon-button (click)="toggle()">
+      <md-icon>keyboard_arrow_up</md-icon>
+    </button>
+
     <button md-icon-button [mdMenuTriggerFor]="menu">
       <md-icon>more_vert</md-icon>
     </button>
+
     <md-menu #menu="mdMenu">
       <button md-menu-item>
         <span>Unpublish</span>

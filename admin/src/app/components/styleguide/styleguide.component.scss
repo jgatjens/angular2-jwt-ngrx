@@ -1,3 +1,5 @@
+@import '~sass-mq/mq';
+
 :host {
   .styleguide-card {
     width: 90%;
@@ -19,7 +21,7 @@
 
       .styleguide-header {
         background-color: rgba(25,118,210,.1);
-        color: #1976d2;
+        color: #000;
       }
     }
   }
@@ -40,5 +42,16 @@
   .styleguide-content {
     padding: 20px;
     text-align: center;
+  }
+
+  // tablet
+  @include mq($until: tablet) {
+    .styleguide-card {
+      margin: 10px auto;
+      width: 95%;
+    }
+    .styleguide-content {
+      padding: 8px;
+    }
   }
 }

@@ -1,0 +1,24 @@
+<form class="app-forms" (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <h2>Profile Information</h2>
+  <md-input-container>
+    <input mdInput name="email" required placeholder="Email">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput name="name" required placeholder="Name">
+  </md-input-container>
+  <md-radio-group color="warn">
+    <md-radio-button value="male">Male</md-radio-button>
+    <md-radio-button value="female">Female</md-radio-button>
+  </md-radio-group>
+  <md-input-container>
+    <input mdInput name="phone" placeholder="Phone">
+  </md-input-container>
+  <md-input-container>
+    <input mdInput name="location" placeholder="Location">
+  </md-input-container>
+
+  <div class="form-submit">
+    <md-spinner *ngIf="inProgress" color="accent" class="form-status"></md-spinner>
+    <button [disabled]="inProgress" md-raised-button color="warn">UPDATE PROFILE</button>
+  </div>
+</form>

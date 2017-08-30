@@ -7,7 +7,7 @@ import { ICard } from './card.interface';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent {
-  public toggleAccordion = true;
+  public toggleAccordion = false;
   @Input() public card: ICard;
 
   constructor() {}

@@ -1,7 +1,7 @@
 <div class="styleguide-card">
   <div class="styleguide-header"> {{ header }}</div>
 
-  <div class="styleguide-content">
+  <div class="styleguide-content" [ngClass]="{inline: inline}">
     <ng-content></ng-content>
   </div>
 </div>

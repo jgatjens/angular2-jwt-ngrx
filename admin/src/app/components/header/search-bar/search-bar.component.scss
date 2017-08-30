@@ -1,3 +1,5 @@
+@import '~sass-mq/mq';
+
 :host {
   .search-bar {
     background-color: rgba(#fff, 0.15);
@@ -21,10 +23,28 @@
     outline: none;
     position: relative;
     top: 3px;
-
-
+    width: 80%;
   }
+
   input::placeholder {
     color: white;
   }
+
+  // tablet
+  @include mq($until: tablet) {
+    .search-bar {
+      margin: 0 2%;
+    }
+
+    .mat-icon-button {
+      margin: 0;
+    }
+
+    input {
+      width: auto;
+      margin-right: 0;
+      max-width: 150px;
+    }
+  }
+
 }

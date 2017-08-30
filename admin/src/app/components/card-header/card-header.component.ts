@@ -8,6 +8,7 @@ import { ICardHeader } from './card-header.interface';
 })
 export class CardHeaderComponent {
   @Input() public cardHeader: ICardHeader;
+  @Input() public toggleAccordion: boolean;
   @Output() public cardHeaderToggle = new EventEmitter();
 
   constructor() { }

@@ -1,0 +1,55 @@
+.app-forms {
+
+  max-width: 370px;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+
+  .form-status {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+
+  //Inputs
+  .mat-input-container {
+    width: 100%;
+  }
+
+  .mat-form-field-placeholder {
+    color: rgba(0, 0, 0, 0.22);
+  }
+
+  .mat-form-field-underline {
+    background-color: rgba(0, 0, 0, 0.22);
+  }
+
+  .form-submit {
+    margin-top: 10px;
+    text-align: right;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    button {
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  // radio buttons
+  .mat-radio-button {
+    margin-right: 10px;
+
+    // &.mat-accent {
+    //   &.mat-radio-checked .mat-radio-outer-circle,  {
+    //     border-color: #000000;
+    //   }
+    //   .mat-radio-inner-circle {
+    //     background-color: #000000;
+    //   }
+    // }
+  }
+}

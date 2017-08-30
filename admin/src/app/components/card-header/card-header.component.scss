@@ -2,8 +2,6 @@ $padding: 10px;
 
 :host {
 
-
-
   .card-header {
     display: flex;
     align-items: center;
@@ -28,6 +26,15 @@ $padding: 10px;
     }
   }
 
+  .card-buttons {
+    .mat-icon-button {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      // font-size: 35px;
+    }
+  }
+
   .card-title {
     padding-left: 20px;
     > span {
@@ -35,9 +42,4 @@ $padding: 10px;
       text-align: left;
     }
   }
-
-  // colors
-  .color-technology { background-color: #d94d4d; }
-  .color-creative { background-color: #4A90E2; }
-  .color-applicant { background-color: #9013FE; }
 }
